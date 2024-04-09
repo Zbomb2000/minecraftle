@@ -165,11 +165,11 @@ export default function Stats({
             {row("Games lost", liveUserScores.total_losses.toString())}
             {row(
               "Win% ratio",
-              (
+              Math.Round((
                 ((liveUserScores.total_games - liveUserScores.total_losses) /
                   liveUserScores.total_games) *
                 100
-              ).toString() + "%"
+              )).toString() + "%"
             )}
 
             <tr className="h-4"></tr>
